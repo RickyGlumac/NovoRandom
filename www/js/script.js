@@ -1,15 +1,11 @@
 var startup;
+var myList = JSON.parse(localStorage['myList']);
 $(document).ready (function() {
 	startup=0;
 	if (localStorage['myList'] == null) localStorage['myList']="[]";
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
-	var myList = JSON.parse(localStorage['myList']);
-	myList.push("jedan", "dva", "tri");
-	localStorage['myList'] = JSON.stringify(myList);
 	myList = JSON.parse(localStorage['myList']);
-	alert(myList);
-	alert(JSON.parse(localStorage['myList']));
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
@@ -143,10 +139,6 @@ function showList() {
 		$("#lista").append(listItem);
 	}
 };
-
-
-var myList = JSON.parse(localStorage['myList']);
-
 
 
 function dodajButton(){
