@@ -5,7 +5,12 @@ $(document).ready (function() {
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
 	var myList = JSON.parse(localStorage['myList']);
+	var yoyo = ["jedan", "dva", "tri"];
+	myList.push(yoyo);
+	localStorage['myList'] = JSON.stringify(myList);
+	myList = JSON.parse(localStorage['myList']);
 	alert(myList);
+	alert(JSON.parse(localStorage['myList']););
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
