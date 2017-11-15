@@ -1,5 +1,4 @@
 var startup;
-var myList = JSON.parse(localStorage['myList']);
 $(document).ready (function() {
 	startup=0;
 	if (localStorage['myList'] == null) localStorage['myList']="[]";
@@ -9,7 +8,9 @@ $(document).ready (function() {
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
-});		
+});	
+var myList = JSON.parse(localStorage['myList']);
+
 setTimeout(function() { 
 window.onload = $('#loader').hide();
 document.getElementById('body').style.display = 'block';
