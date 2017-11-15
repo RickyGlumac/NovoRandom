@@ -5,7 +5,7 @@ $(document).ready (function() {
 	if (localStorage['myList'] == null) localStorage['myList']="[]";
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
-	myList = JSON.parse(localStorage['myList']);
+	var myList = JSON.parse(localStorage['myList']);
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
