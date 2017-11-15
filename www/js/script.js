@@ -5,8 +5,7 @@ $(document).ready (function() {
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
 	var myList = JSON.parse(localStorage['myList']);
-	var yoyo = ["jedan", "dva", "tri"];
-	myList.push(yoyo);
+	myList.push("jedan", "dva", "tri");
 	localStorage['myList'] = JSON.stringify(myList);
 	myList = JSON.parse(localStorage['myList']);
 	alert(myList);
