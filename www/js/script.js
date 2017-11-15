@@ -8,9 +8,7 @@ $(document).ready (function() {
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
-});	
-var myList = JSON.parse(localStorage['myList']);
-
+});		
 setTimeout(function() { 
 window.onload = $('#loader').hide();
 document.getElementById('body').style.display = 'block';
@@ -142,6 +140,10 @@ function showList() {
 };
 
 
+var myList = JSON.parse(localStorage['myList']);
+
+
+
 function dodajButton(){
 	location.hash="#addItem";
 	showPage("#addItem");
@@ -151,11 +153,8 @@ function dodajItem(){
 	var item = document.getElementById('noviItem').value;
 	if(item != ""){
 	var lista = document.getElementById('lista');
-		alert("2"+lista+" "+myList);
 	myList.push(item);
-		alert("3"+myList);
 	localStorage['myList'] = JSON.stringify(myList);
-		alert("4", + localStorage['myList']);
 	location.hash="listPage";
 	showPage("#listPage");
 	}
