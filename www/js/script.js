@@ -5,6 +5,7 @@ $(document).ready (function() {
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
 	var myList = JSON.parse(localStorage['myList']);
+	alert(myList);
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
@@ -152,9 +153,8 @@ function dodajButton(){
 function dodajItem(){
 	var item = document.getElementById('noviItem').value;
 	if(item != ""){
-		alert("1");
 	var lista = document.getElementById('lista');
-		alert("2"+lista);
+		alert("2"+lista+" "+myList);
 	myList.push(item);
 		alert("3"+myList);
 	localStorage['myList'] = JSON.stringify(myList);
