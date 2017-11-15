@@ -10,7 +10,7 @@ $(document).ready (function() {
 	localStorage['myList'] = JSON.stringify(myList);
 	myList = JSON.parse(localStorage['myList']);
 	alert(myList);
-	alert(JSON.parse(localStorage['myList']););
+	alert(JSON.parse(localStorage['myList']));
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
