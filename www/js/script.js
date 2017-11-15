@@ -152,13 +152,13 @@ function dodajButton(){
 function dodajItem(){
 	var item = document.getElementById('noviItem').value;
 	if(item != ""){
-		console.log("1");
+		alert("1");
 	var lista = document.getElementById('lista');
-		console.log("2"+lista);
+		alert("2"+lista);
 	myList.push(item);
-		console.log("3"+myList);
+		alert("3"+myList);
 	localStorage['myList'] = JSON.stringify(myList);
-		console.log("4", + localStorage['myList']);
+		alert("4", + localStorage['myList']);
 	location.hash="listPage";
 	showPage("#listPage");
 	}
