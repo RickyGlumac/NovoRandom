@@ -153,7 +153,10 @@ function dodajItem(){
 	var item = document.getElementById('noviItem').value;
 	if(item != ""){
 	var lista = document.getElementById('lista');
+		myList = JSON.parse(localStorage['myList']);
+		alert("1 "+myList);
 	myList.push(item);
+		alert("2 "+myList);
 	localStorage['myList'] = JSON.stringify(myList);
 	location.hash="listPage";
 	showPage("#listPage");
