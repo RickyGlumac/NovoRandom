@@ -153,10 +153,8 @@ function dodajItem(){
 	var item = document.getElementById('noviItem').value;
 	if(item != ""){
 	var lista = document.getElementById('lista');
-		myList = JSON.parse(localStorage['myList']);
-		alert("1 "+myList);
+	myList = JSON.parse(localStorage['myList']);			//DODANO zbog 1)
 	myList.push(item);
-		alert("2 "+myList);
 	localStorage['myList'] = JSON.stringify(myList);
 	location.hash="listPage";
 	showPage("#listPage");
@@ -243,6 +241,7 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 	$("#spremi").off("click").on("click", function () {
 		var tekst = document.getElementById("inputUredi").value;
 		if(tekst != ""){
+			myList = JSON.parse(localStorage['myList']);			//DODANO ZBOG 1)
 			myList[idLI] = "";
 			var span = $("#"+idLI).children()[0];
 			var b1 = $("#"+idLI).children()[1];
