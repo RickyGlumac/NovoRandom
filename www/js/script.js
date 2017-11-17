@@ -227,7 +227,9 @@ $('#myModal').on('shown.bs.modal', function (event) {
 	var idLI = button.data('id');
 	$("#obrisi").off("click").on("click", function () {
 		myList=JSON.parse(localStorage['myList']);
+		alert("1  "+myList);  						//-------------------------
 		myList.splice(idLI, 1);
+		alert("2  "+myList); 						//-------------------------
 		localStorage['myList']=JSON.stringify(myList);
 		showList();
 	});
@@ -242,6 +244,7 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 		var tekst = document.getElementById("inputUredi").value;
 		if(tekst != ""){
 			myList = JSON.parse(localStorage['myList']);			//DODANO ZBOG 1)
+			alert("1  "+myList);  					//-------------------------
 			myList[idLI] = "";
 			var span = $("#"+idLI).children()[0];
 			var b1 = $("#"+idLI).children()[1];
@@ -255,6 +258,7 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 			myList=JSON.parse(localStorage['myList']);
 			myList[idLI] = tekst;
 			localStorage['myList']=JSON.stringify(myList);
+			alert("2  "+myList);  					//-------------------------
 			document.getElementById("inputUredi").value = "";
 			showList();
 		}
