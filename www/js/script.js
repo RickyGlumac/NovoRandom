@@ -265,42 +265,48 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 });
 
 function generate(){
-		var myList2=JSON.parse(localStorage['myList2']);
-		var broj = myList2.length;
-		if (broj == 0) return 0;
-		var rndBroj = getRandom(broj)-1;
-		
-		var list2 = [];
-		for (var i=0;i<broj;i++) {
-			if (i!=rndBroj) list2.push(myList2[i]);
-		}
-		console.log(rndBroj);
-		localStorage['myList2']=JSON.stringify(list2);
-		/*$(".idk_winner_h1a").text("RANDOM:");*/
-		$(".idk_winner_h1b").animate ({
-			opacity: 0
-		}, 1000, function() {
-		$(".idk_winner_h1b").text(myList2[rndBroj]);
-	});
-		$(".idk_winner_h1b").animate ({
-			opacity: 1
-		}, 1000);
+	var myList2=JSON.parse(localStorage['myList2']);
+	var broj = myList2.length;
+	if (broj == 0) return 0;
+	var rndBroj = getRandom(broj)-1;
+	var list2 = [];
+	for (var i=0;i<broj;i++) {
+		if (i!=rndBroj) list2.push(myList2[i]);
 	}
-
-
+	console.log(rndBroj);
+	localStorage['myList2']=JSON.stringify(list2);
+	/*$(".idk_winner_h1a").text("RANDOM:");*/
+	$(".idk_winner_h1b").animate ({
+		opacity: 0
+	}, 1000, function() {
+	$(".idk_winner_h1b").text(myList2[rndBroj]);
+});
+	$(".idk_winner_h1b").animate ({
+		opacity: 1
+	}, 1000);
+}
 	
-	function getRandom(max){
-		var miliSekunde = new Date().getMilliseconds();
-		return Math.floor((miliSekunde * max / 1000) + 1);
+function getRandom(max){
+	var miliSekunde = new Date().getMilliseconds();
+	return Math.floor((miliSekunde * max / 1000) + 1);
+}
+
+//--------------DODANO 17.11.2017-----------------------------------//
+
+$('html').click(function(){					//ZATVARANJE MENIJA ON BODY(html) CLICK//
+	if($('.foot1').hasClass('foot1Open')){
+		if(event.target.className!="meni idk-footer-style" && event.target.className!="fa fa-bars idk-right-menu" && event.target.className!="btn btn-default idk-btn-style"){
+			dropup();
+		}
 	}
+});
 
-/* FOOTER RESISE */
+$('#noviItem').on('click', function(){
+	$('.foot1').hide();
+});
 
-var initialScreenSize = window.innerHeight; 
-window.addEventListener("resize", function() {
-   if(window.innerHeight < initialScreenSize){
-        $(".footer").hide();
-        $(".iks").hide(); 
-   } else{ 
-        $(".footer").show();
-        $(".iks").show();  } });
+$('html').click(function(){
+	if(!($('.foot1').is(':visible'))){
+		if(event.target.id != 'noviItem')	$('.foot1').show();
+	}
+});
