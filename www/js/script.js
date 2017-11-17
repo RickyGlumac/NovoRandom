@@ -41,7 +41,6 @@ function idk_animation() {
 	setTimeout(count, 1000);
 	
 	function frame() {
-		alert("Frame: ");
 		if (pos.top < 70) {
 		clearInterval(id);
 
