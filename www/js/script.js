@@ -41,6 +41,7 @@ function idk_animation() {
 	setTimeout(count, 1000);
 	
 	function frame() {
+		alert("Frame: ");
 		if (pos.top < 70) {
 		clearInterval(id);
 
@@ -59,42 +60,42 @@ function idk_animation() {
 
 	function count() {
 		y=x;
-		if(window.innerWidth < 750){		
-		if (x==0){
-			fs=30;
-			y='<i class="fa fa-refresh fa-2x"></i>';
+		if(window.innerWidth < 750){
+			if (x==0){
+				fs=30;
+				y='<i class="fa fa-refresh fa-2x"></i>';
 			}
 			elem.innerHTML=y;
 			elem.style.fontSize = fs+'px';
 			x--;
 			if (x>-1) setTimeout(count, 1000);
-		else {
-			small.style.opacity=z;
-			winner.style.opacity=z;
-			$(".idk_winner").show();
-			small.style.display="block";
-			idkhome.style.display="block";
-			id = setInterval(frame, 15);
-		}				
+			else {
+				small.style.opacity=z;
+				winner.style.opacity=z;
+				$(".idk_winner").show();
+				small.style.display="block";
+				idkhome.style.display="block";
+				id = setInterval(frame, 15);
+			}				
 		}else{
-		fs=160;
-		if(x==0){
-			fs=100;
-			y='<i class="fa fa-refresh fa-2x"></i>';
+			fs=160;
+			if(x==0){
+				fs=100;
+				y='<i class="fa fa-refresh fa-2x"></i>';
+			}
+			elem.innerHTML=y;
+			elem.style.fontSize = fs+'px';
+			x--;
+			if (x>-1) setTimeout(count, 1000);
+			else {
+				small.style.opacity=z;
+				winner.style.opacity=z;
+				$(".idk_winner").show();
+				small.style.display="block";
+				idkhome.style.display="block";
+				id = setInterval(frame, 15);
+			}
 		}
-		elem.innerHTML=y;
-		elem.style.fontSize = fs+'px';
-		x--;
-		if (x>-1) setTimeout(count, 1000);
-		else {
-			small.style.opacity=z;
-			winner.style.opacity=z;
-			$(".idk_winner").show();
-			small.style.display="block";
-			idkhome.style.display="block";
-			id = setInterval(frame, 15);
-		}
-	}
 	}
 }
 
@@ -295,7 +296,7 @@ function getRandom(max){
 
 $('html').click(function(){					//ZATVARANJE MENIJA ON BODY(html) CLICK//
 	if($('.foot1').hasClass('foot1Open')){
-		if(event.target.className!="meni idk-footer-style" && event.target.className!="fa fa-bars idk-right-menu" && event.target.className!="btn btn-default idk-btn-style"){
+		if(event.target.className!="meni idk-footer-style" && event.target.className!="fa fa-bars idk-right-menu" && event.target.className!="btn btn-default idk-btn-style" && event.target.className!="foot-li"){
 			dropup();
 		}
 	}
