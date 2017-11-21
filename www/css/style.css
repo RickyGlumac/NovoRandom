@@ -106,10 +106,12 @@ text-decoration: none !important;
 	position: relative;
 }
 .idk_winner_name {
- position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
+	position: absolute;
+	top: 45%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 /* @media (min-height: 650px){
 	.idk_small{
@@ -184,10 +186,11 @@ text-decoration: none !important;
 .idk_winner_h1b {
 	border-top: 3px solid #AE3A3E;
 	border-bottom: 3px solid #AE3A3E;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 10px;
 	padding-top:10px;
+	width: max-content;
 }
 #chev {
 	margin-right: 6px;
