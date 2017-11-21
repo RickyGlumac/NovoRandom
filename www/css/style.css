@@ -361,13 +361,13 @@ color:#ffe3d0;
 	border-top: 1px solid #1d1d29;
 	padding-left: 15px;
 	padding-top: 1px;
-	padding-bottom: 4px;
+	padding-bottom: 6px;
 	margin: 7px 0 6px 0;
 	font-size: 18px;
 }
 #lista > li:last-child{
 	border-bottom: 1px solid #1d1d29;
-	padding-bottom: 11px;
+	padding-bottom: 13px;
 }
 .fa-times, .fa-pencil-square-o{
 	color: #FFE3D0;
