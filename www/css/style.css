@@ -32,6 +32,8 @@ text-decoration: none !important;
 	width:50%;
 	
 }
+/* ----------------------------------------------------------------------------------------------
+
 .idk_startbutton {
 	background-color: #ef5c54;
 	color: #ffe3d0;
@@ -69,7 +71,7 @@ text-decoration: none !important;
 	clip-path: ellipse(70% 85% at 50% 0%);
 	height: 50vh;
 	background-color: #9e373b;
-}
+} --------------------------------------------------------------------------------------*/
 .dropup{
 	-webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
@@ -85,11 +87,12 @@ text-decoration: none !important;
 	background-color: #1d1d29;
 	color: #ffe3d0;	
 }
+/* -----------------------------------------------------------------------------------------
 .slika{
-	 display: flex;
-  justify-content: center;
-  z-index:1;
-}
+	display: flex;
+	justify-content: center;
+	z-index:1;
+} ---------------------------------------------------------------------------------------------*/
 .idk_home {
 	height: 90vh;
     width: 100%;
@@ -124,11 +127,11 @@ text-decoration: none !important;
 	}
 } */
 @media (min-height: 750px){
-	.idk_startbutton{
+/* 	.idk_startbutton{
 		width: 50% !important;
 		height: 75% !important;
 		font-size: 70px;
-	}
+	} */
 	.idk-img-size{
 		height: 100px;
 	}
@@ -155,11 +158,11 @@ text-decoration: none !important;
 	.idk-second-header {
     padding-left: 13% !important;
 	}
-	.idk_small{
+	/* .idk_small{
 	width: 13% !important;
     height: 20% !important;
 	margin-left: 22% !important;
-	}
+	} */
 	#chev{
 		font-size: 42px !important;
 	}
@@ -212,14 +215,13 @@ text-decoration: none !important;
 }
 
  .idk-right-menu{
-	 padding-right: 20px !important;
-	 color: #FFE3D0;
+	color: #FFE3D0;
  }
  .idk-footer-style{
 	text-transform: uppercase;
-	padding-left: 15px;
 	font-family: Saira;
 	color: #ffe3d0;
+	padding-left: 15px;
  }
 li {list-style-type: none;}
 li.dropdup-li:first-child{
@@ -357,13 +359,13 @@ color:#ffe3d0;
 	border-top: 1px solid #1d1d29;
 	padding-left: 15px;
 	padding-top: 1px;
-	padding-bottom: 6px;
+	padding-bottom: 4px;
 	margin: 7px 0 6px 0;
 	font-size: 18px;
 }
 #lista > li:last-child{
 	border-bottom: 1px solid #1d1d29;
-	padding-bottom: 13px;
+	padding-bottom: 11px;
 }
 .fa-times, .fa-pencil-square-o{
 	color: #FFE3D0;
@@ -596,8 +598,100 @@ color:#ffe3d0;
 .fa{
 	color: #ffe3d0;
 }
-
+.idk-footer-style:first-child{
+	padding: 0;
+}
 /*NOVI FOOTER--------------*/
+
+/* ----------TEST------------ */
+
+.idk_halfcircle{
+	webkit-clip-path: ellipse(70% 85% at 50% 0%);
+    clip-path: ellipse(70% 85% at 50% 0%);
+	height: 50vh;
+	background-color: #9e373b;
+	z-index: 1; 
+}
+.TkrugHolder{
+	width: 55%;
+	position: relative; 
+	z-index: 10;
+	top: -170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.TkrugHolder2{
+	width: 100%;
+}
+.idk_startbutton{
+	width: 100%; 
+	height: 0;
+	padding-bottom: 100%;
+	background-color: #ef5c54;
+    color: #ffe3d0;
+	border: none;
+	border-radius: 50%;
+	position: relative;
+	z-index: 10;
+	/* position: relative; */
+	overflow:hidden;
+	-webkit-box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75)  !important;
+}
+.TkrugHolder p{
+	z-index: 12;
+	color: #ffe3d0;
+	font-size: 30px;
+	display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+	text-align:center;
+    text-decoration:none;
+}
+.idk_small{
+	position: absolute;
+	width: 50px; 
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background-color: #ef5c54;
+    color: #ffe3d0;
+	z-index: 11;
+	bottom: 0;
+	display: none;
+}
+.TLholder{
+	position: absolute;
+	bottom: 15%;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	width:40%;
+}
+.Tlink{
+	display:block;
+	float:left;
+	width:100%;
+	padding-top:50%;
+    padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+	text-align:center;
+}
+.refresh_ikona{
+	margin-top: -15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ----------TEST------------ */
+
 
 .no_margin{ margin: 0;}
 .margin_bottom65{ margin-bottom: 65px;}
