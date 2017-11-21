@@ -36,12 +36,14 @@ function idk_animation() {
 	var small=document.getElementById("small");
 	var idkhome=document.getElementById("home");
 	var winner=document.getElementById("winner");
+	var para=document.getElementById("innerTekst");
 	var pos2 = $('#polukrug').position();
 	var pos = $('#startbutton').position();
+	console.log(pos); 
 	setTimeout(count, 1000);
 	
 	function frame() {
-		if (pos.top < 70) {
+		if (pos.top < -80) {
 		clearInterval(id);
 
 		} else {
@@ -54,6 +56,7 @@ function idk_animation() {
 			pos.top--; 
 			pos2.top=pos2.top-2.6;
 			polukrug.style.marginTop = pos2.top + 'px';
+			console.log(pos+"  p2: "+pos2); 
 		}
 	}
 
@@ -62,10 +65,11 @@ function idk_animation() {
 		if(window.innerWidth < 750){
 			if (x==0){
 				fs=30;
-				y='<i class="fa fa-refresh fa-2x"></i>';
+				y='<i class="fa fa-refresh fa-2x refresh_ikona"></i>';
 			}
-			elem.innerHTML=y;
-			elem.style.fontSize = fs+'px';
+			para.innerHTML=y;
+			para.style.fontSize = fs+'px';
+			
 			x--;
 			if (x>-1) setTimeout(count, 1000);
 			else {
@@ -82,8 +86,8 @@ function idk_animation() {
 				fs=100;
 				y='<i class="fa fa-refresh fa-2x"></i>';
 			}
-			elem.innerHTML=y;
-			elem.style.fontSize = fs+'px';
+			para.innerHTML=y;
+			para.style.fontSize = fs+'px';
 			x--;
 			if (x>-1) setTimeout(count, 1000);
 			else {
@@ -198,7 +202,8 @@ function nazadMainSmall(){
 	function frame() {
 		if (margin == 0) {
 		clearInterval(id);
-		elem.innerHTML="START";
+		tekstStart=document.getElementById("innerTekst");
+		tekstStart.innerHTML="START";
 		
 		$('#startbutton').off('click');
 		$("#home").hide();
@@ -213,7 +218,7 @@ function nazadMainSmall(){
 		}
 	}
 	id = setInterval(frame, 15);
-};
+}
 
 function nazadList(){
 	location.hash="#listPage";
