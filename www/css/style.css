@@ -157,9 +157,6 @@ text-decoration: none !important;
     bottom: 341px !important;
     font-size: 40px !important;
 	}
-	.idk-second-header {
-    padding-left: 13% !important;
-	}
 	/* .idk_small{
 	width: 13% !important;
     height: 20% !important;
@@ -186,10 +183,11 @@ text-decoration: none !important;
 .idk_winner_h1b {
 	border-top: 3px solid #AE3A3E;
 	border-bottom: 3px solid #AE3A3E;
-	margin-left: 25px;
-	margin-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-bottom: 10px;
 	padding-top:10px;
+	width: max-content;
 }
 #chev {
 	margin-right: 6px;
@@ -200,13 +198,6 @@ text-decoration: none !important;
 	text-align: center;
 	text-transform: uppercase;
 	font-family: Saira;
-}
-.idk-header:first-child{
-    padding-top: 10%;
-	padding-right: 13%;
-}
-.idk-second-header{
-	padding-left: 25%;
 }
 
 .idk-btn-style{
@@ -361,13 +352,13 @@ color:#ffe3d0;
 	border-top: 1px solid #1d1d29;
 	padding-left: 15px;
 	padding-top: 1px;
-	padding-bottom: 6px;
+	padding-bottom: 4px;
 	margin: 7px 0 6px 0;
 	font-size: 18px;
 }
 #lista > li:last-child{
 	border-bottom: 1px solid #1d1d29;
-	padding-bottom: 13px;
+	padding-bottom: 11px;
 }
 .fa-times, .fa-pencil-square-o{
 	color: #FFE3D0;
@@ -406,8 +397,6 @@ color:#ffe3d0;
 	background-color: #1d1d29;
 	height: 46px;
 	width:100%;
-	position: fixed; 
-	top: 0;
 }
 #nazadMain{
 	/*width: 10px; 
@@ -692,6 +681,21 @@ color:#ffe3d0;
 	margin-top: -15px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+path{
+   	fill: #9e373b;
+}
+
+.idk-first-header{
+	position:absolute;
+	top: 10%;
+	left:25%
+}
+.idk-second-header{
+	position:absolute;
+	top: 17%;
+	left:45%
 }
 
 /* ----------TEST------------ */
