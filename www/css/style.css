@@ -4,6 +4,22 @@ body {
 	background-color: #6c1827;
 	margin:0;
 }
+@font-face {
+font-family: SairaRegular;
+src: url(fonts/Saira-Regular.ttf);
+}
+@font-face {
+font-family: SairaBold;
+src: url(fonts/Saira-Bold.ttf);
+}
+@font-face {
+font-family: SairaMedium;
+src: url(fonts/Saira-Medium.ttf);
+}
+@font-face {
+font-family: SairaLight;
+src: url(fonts/Saira-Light.ttf);
+}
 h2 {
 	text-transform:uppercase;
 	margin: 0 0;
