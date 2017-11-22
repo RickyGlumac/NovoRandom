@@ -32,14 +32,14 @@ function idk_animation() {
 	var z=0, z2=0;
 	var fs=80;
 	var elem = document.getElementById("startbutton");
-	var polukrug = document.getElementById("polukrug");
 	var small=document.getElementById("small");
 	var idkhome=document.getElementById("home");
 	var winner=document.getElementById("winner");
 	var para=document.getElementById("innerTekst");
 	var pos2 = $('#polukrug').position();
 	var pos = $('#startbutton').position();
-	console.log(pos); 
+	var pos3 = $('#path').position();
+	console.log(pos3); 
 	setTimeout(count, 1000);
 	
 	function frame() {
@@ -53,10 +53,17 @@ function idk_animation() {
 			if (z>0.5)z2+=0.2;
 			if (z>1) z=1;
 			if (z2>1) z2=1;
-			pos.top--; 
-			pos2.top=pos2.top-2.6;
-			polukrug.style.marginTop = pos2.top + 'px';
-			console.log(pos+"  p2: "+pos2); 
+			pos.top--;
+			pos3.top=pos3.top-2.6;
+			document.getElementById("path").style.marginTop = pos3.top + 'px';
+			if(pos3.top<-50 && pos3.top>-53){
+				$('.idk-second-header').animate({
+					height: 'hide'
+				});
+				$('.idk-first-header').animate({
+					height: 'hide'
+				});
+			}
 		}
 	}
 
@@ -187,13 +194,13 @@ function nazadMainSmall(){
 	startup=0;
 	var id;
 	var elem = document.getElementById("startbutton");
-	var polukrug = document.getElementById("polukrug");
+	var path = document.getElementById("path");
 	var small=document.getElementById("small");
 	var idkhome=document.getElementById("home");
 	var winner=document.getElementById("winner");
 	var op=0.9;
 	$('#startbutton').css('top: 69');
-	var pos2 = $('#polukrug').position();
+	var pos2 = $('#path').position();
 	$('.idk_winner').animate({
 		width: 'hide'
 	});
@@ -214,7 +221,16 @@ function nazadMainSmall(){
 			pos++; 
 			if(margin>-3 && margin<-2) margin=margin+2.5000000000002376;
 			else margin+=2.6;
-			polukrug.style.marginTop = margin + 'px'; 
+			path.style.marginTop = margin + 'px'; 
+			console.log(margin);
+			if(margin<-50 && margin>-52){
+				$('.idk-second-header').animate({
+					height: 'show'
+				});
+				$('.idk-first-header').animate({
+					height: 'show'
+				});
+			}
 		}
 	}
 	id = setInterval(frame, 15);
