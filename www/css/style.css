@@ -4,22 +4,6 @@ body {
 	background-color: #6c1827;
 	margin:0;
 }
-@font-face {
-font-family: SairaRegular;
-src: url(fonts/Saira-Regular.ttf);
-}
-@font-face {
-font-family: SairaBold;
-src: url(fonts/Saira-Bold.ttf);
-}
-@font-face {
-font-family: SairaMedium;
-src: url(fonts/Saira-Medium.ttf);
-}
-@font-face {
-font-family: SairaLight;
-src: url(fonts/Saira-Light.ttf);
-}
 h2 {
 	text-transform:uppercase;
 	margin: 0 0;
@@ -277,7 +261,7 @@ color:#ffe3d0;
 	font-size: 26px;
 }
 .ADDITEM{
-	margin-top: 65px;
+	margin-top: 55px;
 }
 .idk_adding {
 	margin-left: 25px;
@@ -332,7 +316,7 @@ color:#ffe3d0;
 	padding-top: 3px;
 } 	
 #items_h2{
-	margin-top: 65px;
+	margin-top: 55px;
 	margin-bottom: 41px;
 	font-weight: 100;
 	display: inline-block;
@@ -407,7 +391,8 @@ color:#ffe3d0;
 	text-align: center;
 	font-size: 20px;
 	color: #FFE3D0;
-	margin-top: 15px;
+	padding-top: 12px;
+	margin-top: 0;
 }
 .idk_header{
 	background-color: #1d1d29;
@@ -548,14 +533,14 @@ color:#ffe3d0;
 	text-align: center;
 }
 .idk_about_naslov{
-	margin-top: 65px;
+	margin-top: 15px;
 }
 .idk_about_app p{
 	text-align: justify;
 	margin: 20px 20px 20px 20px;
 }
 .idk_languages {
-	margin-top: 65px;
+	margin-top: 55px;
 	text-align:left;
 	font-size: 20px;
 }
