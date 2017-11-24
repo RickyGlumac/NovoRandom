@@ -50,46 +50,6 @@ text-decoration: none !important;
 	width:50%;
 	
 }
-/* ----------------------------------------------------------------------------------------------
-
-.idk_startbutton {
-	background-color: #ef5c54;
-	color: #ffe3d0;
-	border-radius: 100%;
-	border:none;
-	font-size: 30px;
-    width: 180px;
-    height: 180px;
-	text-transform: uppercase;
-	position: absolute;
-	top:50%;
-	-webkit-box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 44px -6px rgba(0,0,0,0.75)  !important;
-	outline:0;
-	z-index: 99;
-}
-.idk_small {
-	background-color: #ef5c54;
-	color: #ffe3d0;
-	border-radius: 100%;
-	border:none;
-	font-size: 26px;
-	width: 40px;
-	height: 40px;
-	text-transform: uppercase;
-	position: absolute;
-	margin-left: 27%;
-    margin-top: 1%;
-	display: none;
-	outline:0;
-}
-.idk_halfcircle {
-	-webkit-clip-path: ellipse(70% 85% at 50% 0%);
-	clip-path: ellipse(70% 85% at 50% 0%);
-	height: 50vh;
-	background-color: #9e373b;
-} --------------------------------------------------------------------------------------*/
 .dropup{
 	-webkit-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
    -moz-transition: all 500ms cubic-bezier(0.420, 0.000, 0.580, 1.000); 
@@ -105,12 +65,6 @@ text-decoration: none !important;
 	background-color: #1d1d29;
 	color: #ffe3d0;	
 }
-/* -----------------------------------------------------------------------------------------
-.slika{
-	display: flex;
-	justify-content: center;
-	z-index:1;
-} ---------------------------------------------------------------------------------------------*/
 .idk_home {
 	height: 90vh;
     width: 100%;
@@ -131,27 +85,7 @@ text-decoration: none !important;
 	margin-left: auto;
 	margin-right: auto;
 }
-/* @media (min-height: 650px){
-	.idk_small{
-		margin-top: -5% !important;
-	}
-}
-@media (min-height: 615px){
-	.idk_small{
-		margin-top: -6% !important;
-	}
-}
-@media (min-height: 700px){
-	.idk_small{
-		margin-top: -3% !important;
-	}
-} */
 @media (min-height: 750px){
-/* 	.idk_startbutton{
-		width: 50% !important;
-		height: 75% !important;
-		font-size: 70px;
-	} */
 	.idk-img-size{
 		height: 100px;
 	}
@@ -175,11 +109,6 @@ text-decoration: none !important;
     bottom: 341px !important;
     font-size: 40px !important;
 	}
-	/* .idk_small{
-	width: 13% !important;
-    height: 20% !important;
-	margin-left: 22% !important;
-	} */
 	#chev{
 		font-size: 42px !important;
 	}
@@ -191,13 +120,6 @@ text-decoration: none !important;
 	text-align: center;
 	font-size: 9vh;
 }
-/*.idk_winner_h1a {
-	border-top: 3px solid #AE3A3E;
-	border-bottom: 3px solid #AE3A3E;
-	margin-left: 25px;
-	margin-right: 25px;
-	padding-top: 20px;
-}*/
 .idk_winner_h1b {
 	border-top: 3px solid #AE3A3E;
 	border-bottom: 3px solid #AE3A3E;
@@ -271,7 +193,6 @@ color:#ffe3d0;
 .idk_add_item {
 	color: #ffe3d0;
 	text-align: center;
-	/*border-bottom: 2px solid #ffe3d0;*/
 	margin-left: 25px;
 	margin-right: 25px;
 }
@@ -372,13 +293,13 @@ color:#ffe3d0;
 	border-top: 1px solid #1d1d29;
 	padding-left: 15px;
 	padding-top: 1px;
-	padding-bottom: 4px;
+	padding-bottom: 0px;
 	margin: 7px 0 6px 0;
 	font-size: 18px;
 }
 #lista > li:last-child{
 	border-bottom: 1px solid #1d1d29;
-	padding-bottom: 11px;
+	padding-bottom: 7px;
 }
 .fa-times, .fa-pencil-square-o{
 	color: #FFE3D0;
@@ -421,8 +342,6 @@ color:#ffe3d0;
 	width:100%;
 }
 #nazadMain{
-	/*width: 10px; 
-	height: 5vh;*/
 	background-color: inherit;
 	border: 0;
 	position: absolute; 
@@ -618,7 +537,7 @@ color:#ffe3d0;
 }
 /*NOVI FOOTER--------------*/
 
-/* ----------TEST------------ */
+/* ----------MAIN PAGE------------ */
 
 .idk_halfcircle{
 	webkit-clip-path: ellipse(70% 85% at 50% 0%);
@@ -719,8 +638,10 @@ path{
 	top: 17%;
 	left:45%
 }
-
-/* ----------TEST------------ */
+li > span{
+	vertical-align: -6px;
+}
+/* ----------MAIN PAGE------------ */
 
 
 .no_margin{ margin: 0;}
