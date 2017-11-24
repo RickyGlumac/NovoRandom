@@ -1,6 +1,20 @@
 @font-face{
 	font-family: "Saira";
-	src: url("fonts/Saira-Regular.ttf") format("truetype");
+	src: url("fonts/Saira-Regular.ttf") format("truetype"),
+		 url("fonts/Saira-Regular.woff") format("woff"),
+		 url("fonts/Saira-Regular.woff2") format("woff2");
+}
+@font-face{
+	font-family: "SairaBold";
+	src: url("fonts/Saira-Bold.ttf") format("truetype"),
+		 url("fonts/Saira-Bold.woff") format("woff"),
+		 url("fonts/Saira-Bold.woff2") format("woff2");
+}
+@font-face{
+	font-family: "SairaLight";
+	src: url("fonts/Saira-Light.ttf") format("truetype"),
+		 url("fonts/Saira-Light.woff") format("woff"),
+		 url("fonts/Saira-Light.woff2") format("woff2");
 }
 body {
 	font-family: 'Saira', sans-serif;
@@ -320,6 +334,7 @@ color:#ffe3d0;
 	padding-top: 3px;
 } 	
 #items_h2{
+	font-family: 'SairaLight'; 
 	margin-top: 55px;
 	margin-bottom: 41px;
 	font-weight: 100;
@@ -329,6 +344,7 @@ color:#ffe3d0;
 	color:#ffe3d0;
 }	
 #add_item{
+	font-family: 'SairaBold';
 	margin-top: 53px;
 	float: right;
 	display: inline-block;
@@ -377,6 +393,7 @@ color:#ffe3d0;
 	margin-right: 1px;
 }
 #add_item_h2{
+	font-family: 'SairaLight';
 	margin-top: 32px;
 	margin-bottom: 41px;
 	font-weight: 100;
