@@ -502,6 +502,12 @@ color:#ffe3d0;
 	margin: 0;
 	text-align: center;
 }
+.checkbox_check, .checkbox_check-2, .checkbox_check-3{
+	display: none; 
+}
+.jez{
+	margin-bottom: 5px; 
+}
 
 /*ABOUT APP AND LANGUAGES*/
 
