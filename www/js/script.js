@@ -329,3 +329,16 @@ $('html').click(function(){
 		if(event.target.id != 'noviItem')	$('.foot1').show();
 	}
 });
+
+$('#engJez').on('click', function(){
+	$('.checkbox_check').prop('checked', true);
+	$('.idk_languages').change(); 
+});
+$('#bosJez').on('click', function(){
+	$('.checkbox_check-2').prop('checked', true).trigger('click');
+	$('.idk_languages').change(); 
+});
+$('#njemJez').on('click', function(){
+	$('.checkbox_check-3').prop('checked', true);
+	$('.idk_languages').change(); 
+});
