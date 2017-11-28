@@ -9,7 +9,7 @@ $(document).ready (function() {
 			$("#idk_maindiv").reload();
 		});*/
 	var yo=$("#path").position();
-	alert("Pozicija: "+yo); 
+	alert("Pozicija: "+yo.top); 
 });		
 setTimeout(function() { 
 window.onload = $('#loader').hide();
