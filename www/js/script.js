@@ -39,7 +39,7 @@ function idk_animation() {
 	var pos2 = $('#polukrug').position();
 	var pos = $('#startbutton').position();
 	var pos3 = $('#path').position();
-	console.log(pos3); 
+	
 	setTimeout(count, 1000);
 	
 	function frame() {
@@ -211,7 +211,6 @@ function nazadMainSmall(){
 		clearInterval(id);
 		tekstStart=document.getElementById("innerTekst");
 		tekstStart.innerHTML="START";
-		
 		$('#startbutton').off('click');
 		$("#home").hide();
 		} else {
@@ -222,7 +221,6 @@ function nazadMainSmall(){
 			if(margin>-3 && margin<-2) margin=margin+2.5000000000002376;
 			else margin+=2.6;
 			path.style.marginTop = margin + 'px'; 
-			console.log(margin);
 			if(margin<-50 && margin>-52){
 				$('.idk-second-header').animate({
 					height: 'show'
@@ -269,7 +267,6 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 			var b2 = $("#"+idLI).children()[2];
 			$("#"+idLI+ ' span').html("");
 			span = tekst;
-			console.log(span);
 			$("#"+idLI).append(span);
 			$("#"+idLI).append(b1);
 			$("#"+idLI).append(b2);
@@ -294,7 +291,6 @@ function generate(){
 	for (var i=0;i<broj;i++) {
 		if (i!=rndBroj) list2.push(myList2[i]);
 	}
-	console.log(rndBroj);
 	localStorage['myList2']=JSON.stringify(list2);
 	/*$(".idk_winner_h1a").text("RANDOM:");*/
 	$(".idk_winner_h1b").animate ({
