@@ -8,6 +8,8 @@ $(document).ready (function() {
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
+	var yo=$("#path").position();
+	alert("Pozicija: "+yo); 
 });		
 setTimeout(function() { 
 window.onload = $('#loader').hide();
