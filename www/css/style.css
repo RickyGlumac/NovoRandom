@@ -629,17 +629,27 @@ path{
 }
 
 .idk-first-header{
-	position:absolute;
-	top: 10%;
-	left:25%
+	position: relative;
+	left: -5%;
 }
 .idk-second-header{
-	position:absolute;
-	top: 17%;
-	left:45%
+	position: relative;
+	left: 8%;
 }
 li > span{
 	vertical-align: -6px;
+}
+.naslovHolder{
+	width: 80%;
+	position: absolute;
+	top: 10%;
+	left: 0; 
+	right: 0;
+	margin-right: auto; 
+	margin-left: auto;
+}
+.idk_small:focus{
+	outline: 0;
 }
 
 /* ----------MAIN PAGE------------ */
