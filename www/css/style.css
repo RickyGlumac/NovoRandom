@@ -641,7 +641,46 @@ path{
 li > span{
 	vertical-align: -6px;
 }
+
 /* ----------MAIN PAGE------------ */
+
+/* ----------MEDIA BUTTON POSITION------------ */
+
+@media only screen and (max-width: 400px) {
+	.TkrugHolder{
+		top: -180px
+	}
+}
+@media only screen and (max-width: 385px) {
+	.TkrugHolder{
+		top: -175px
+	}
+}
+@media only screen and (max-width: 370px) {
+	.TkrugHolder{
+		top: -170px; 
+	}
+}
+@media only screen and (max-width: 350px) {
+	.TkrugHolder{
+		top: -165px;
+	}
+}
+@media only screen and (max-width: 330px) {
+	.TkrugHolder{
+		top: -155px;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.TkrugHolder{
+		top: -145px;
+	}
+}
+
+
+
+/* ----------MEDIA BUTTON POSITION------------ */
+
 
 
 .no_margin{ margin: 0;}
