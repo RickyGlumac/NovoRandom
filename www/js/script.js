@@ -8,8 +8,6 @@ $(document).ready (function() {
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
-	var yo=$("#path").position();
-	alert("Pozicija: "+yo.top); 
 });		
 setTimeout(function() { 
 window.onload = $('#loader').hide();
@@ -18,7 +16,15 @@ document.getElementById('body').style.display = 'block';
 
 function idk_animation() {
 	if (JSON.parse(localStorage['myList']).length==0) {
-		alert("List is empty!");
+		if ($('input.checkbox_check').prop('checked')){
+			alert("List is empty!");
+		}
+		else if ($('input.checkbox_check-2').prop('checked')){
+			alert("Lista je prazna.");
+		}
+		else if ($('input.checkbox_check-3').prop('checked')){
+			alert("Liste ist leer.");
+		}
 		return;
 	}
 	if(startup==1){
@@ -279,7 +285,15 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 			showList();
 		}
 		else{
-			alert("This field cannot be empty.");
+			if ($('input.checkbox_check').prop('checked')){
+				alert("This field cannot be empty.");
+			}
+			else if ($('input.checkbox_check-2').prop('checked')){
+				alert("Ovo polje ne smije biti prazno.");
+			}
+			else if ($('input.checkbox_check-3').prop('checked')){
+				alert("Dieses Feld kann nicht leer sein.");
+			}
 		}
 	});
 });
