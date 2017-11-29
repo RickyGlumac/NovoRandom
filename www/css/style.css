@@ -256,7 +256,8 @@ color:#ffe3d0;
 } 	
 #items_h2{
 	font-family: 'SairaLight'; 
-	margin-top: 55px;
+	margin-top: 101px;
+	margin-top: 101px;
 	margin-bottom: 41px;
 	font-weight: 100;
 	display: inline-block;
@@ -266,7 +267,7 @@ color:#ffe3d0;
 }	
 #add_item{
 	font-family: 'SairaBold';
-	margin-top: 53px;
+	margin-top: 99px;
 	float: right;
 	display: inline-block;
 	padding: 6px 15px; 
@@ -337,6 +338,7 @@ color:#ffe3d0;
 	margin-top: 0;
 }
 .idk_header{
+	position: fixed;
 	background-color: #1d1d29;
 	height: 46px;
 	width:100%;
@@ -473,14 +475,14 @@ color:#ffe3d0;
 	text-align: center;
 }
 .idk_about_naslov{
-	margin-top: 15px;
+	margin-top: 61px;
 }
 .idk_about_app p{
 	text-align: justify;
 	margin: 20px 20px 20px 20px;
 }
 .idk_languages {
-	margin-top: 55px;
+	margin-top: 101px;
 	text-align:left;
 	font-size: 20px;
 }
@@ -507,6 +509,11 @@ color:#ffe3d0;
 }
 .jez{
 	margin-bottom: 5px; 
+}
+#engleskiJez, #njemackiJez, #bosanskiJez{
+	display: inline;
+	margin: 0;
+	padding: 0;
 }
 
 /*ABOUT APP AND LANGUAGES*/
