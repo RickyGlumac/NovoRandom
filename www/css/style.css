@@ -120,6 +120,13 @@ text-decoration: none !important;
 	text-align: center;
 	font-size: 9vh;
 }
+.idk_winner_h1a{
+	margin-bottom: 0;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: max-content;
+}
 .idk_winner_h1b {
 	border-top: 3px solid #AE3A3E;
 	border-bottom: 3px solid #AE3A3E;
@@ -128,6 +135,7 @@ text-decoration: none !important;
 	padding-bottom: 10px;
 	padding-top:10px;
 	width: max-content;
+	margin-top: 0;
 }
 #chev {
 	margin-right: 6px;
