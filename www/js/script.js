@@ -53,7 +53,6 @@ function idk_animation() {
 	function frame() {
 		if (pos.top < -80) {
 		clearInterval(id);
-
 		} else {
 			small.style.opacity=z;
 			winner.style.opacity=z2;
@@ -155,6 +154,96 @@ function showList() {
 	for (var i=0;i<lista.length;i++) {
 		listItem = '<li id ="'+i+'"><span>'+lista[i]+'</span><button class="obrisi" data-id="'+i+'" data-toggle="modal" data-target="#myModal"><i class="fa fa-times" aria-hidden="true"></i></button><button class="uredi" data-id="'+i+'" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></li>';
 		$("#lista").append(listItem);
+		if(lista[i].length == 19){
+			document.getElementById(i).childNodes[0].style.fontSize = '17px';
+		}
+		if(lista[i].length == 20){
+			document.getElementById(i).childNodes[0].style.fontSize = '16px';
+		}
+		if(lista[i].length >= 21 && lista[i].length <= 22){
+			document.getElementById(i).childNodes[0].style.fontSize = '15px';
+		}
+		if(lista[i].length == 23){
+			document.getElementById(i).childNodes[0].style.fontSize = '14px';
+		}
+		if(lista[i].length >= 24 && lista[i].length <= 25){
+			document.getElementById(i).childNodes[0].style.fontSize = '13px';
+		}
+		if(lista[i].length >= 26 && lista[i].length <= 27){
+			document.getElementById(i).childNodes[0].style.fontSize = '12px';
+		}
+		if(lista[i].length >= 28 && lista[i].length <= 30){
+			document.getElementById(i).childNodes[0].style.fontSize = '11px';
+		}
+		if(lista[i].length >= 31 && lista[i].length <= 33){
+			document.getElementById(i).childNodes[0].style.fontSize = '10px';
+		}
+	}
+	for(var j=0;j<lista.length;j++){
+		if(lista[j].length == 19){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "8px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "1px";
+			}
+		}
+		if(lista[j].length == 20){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "8px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "1px";
+			}
+		}
+		if(lista[j].length >= 21 && lista[j].length <= 22){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "8px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "1px";
+			}
+		}
+		if(lista[j].length == 23){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "9px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "2px";
+			}
+		}
+		if(lista[j].length >= 24 && lista[j].length <= 25){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "9px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "2px";
+			}
+		}
+		if(lista[j].length >= 26 && lista[j].length <= 27){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "10px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "3px";
+			}
+		}
+		if(lista[j].length >= 28 && lista[j].length <= 30){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "9px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "2px";
+			}
+		}
+		if(lista[j].length >= 31 && lista[j].length <= 33){
+			if($('#'+j).is(':last-child')){
+				document.getElementById(j).style.paddingBottom = "10px";
+			}
+			else{
+				document.getElementById(j).style.paddingBottom = "3px";
+			}
+		}
 	}
 };
 
@@ -308,15 +397,30 @@ function generate(){
 		if (i!=rndBroj) list2.push(myList2[i]);
 	}
 	localStorage['myList2']=JSON.stringify(list2);
-	/*$(".idk_winner_h1a").text("RANDOM:");*/
-	$(".idk_winner_h1b").animate ({
-		opacity: 0
-	}, 1000, function() {
-	$(".idk_winner_h1b").text(myList2[rndBroj]);
-});
-	$(".idk_winner_h1b").animate ({
-		opacity: 1
-	}, 1000);
+	var item = myList2[rndBroj];
+	if(item.indexOf(" ")!== -1){
+		var rijeci = item.split(" ");
+		var novo = rijeci[0]+"</br>"+rijeci[1];
+		$(".idk_winner_h1b").animate ({
+			opacity: 0
+		}, 1000, function() {
+			$(".idk_winner_h1b").html(novo);
+		});
+		$(".idk_winner_h1b").animate ({
+			opacity: 1
+		}, 1000);
+	}
+	else{
+		/*$(".idk_winner_h1a").text("RANDOM:");*/
+		$(".idk_winner_h1b").animate ({
+			opacity: 0
+		}, 1000, function() {
+			$(".idk_winner_h1b").text(myList2[rndBroj]);
+		});
+		$(".idk_winner_h1b").animate ({
+			opacity: 1
+		}, 1000);
+	}
 }
 	
 function getRandom(max){
