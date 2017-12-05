@@ -35,6 +35,7 @@ function idk_animation() {
 		startup=1;
 		localStorage['myList2']=localStorage['myList'];
 	}
+
 	generate();
 	var x=3, id, y;
 	var z=0, z2=0;
@@ -93,7 +94,7 @@ function idk_animation() {
 				small.style.display="block";
 				idkhome.style.display="block";
 				id = setInterval(frame, 15);
-			}				
+			}
 		}else{
 			fs=160;
 			if(x==0){
@@ -178,6 +179,9 @@ function showList() {
 		if(lista[i].length >= 31 && lista[i].length <= 33){
 			document.getElementById(i).childNodes[0].style.fontSize = '10px';
 		}
+		console.log($("#"+i).children()[0]);
+		var yo = $("#"+i).children()[0];
+		console.log(yo); 
 	}
 	for(var j=0;j<lista.length;j++){
 		if(lista[j].length == 19){
@@ -400,6 +404,19 @@ function generate(){
 	var item = myList2[rndBroj];
 	if(item.indexOf(" ")!== -1){
 		var rijeci = item.split(" ");
+		if(rijeci[0].length > 20){
+			var pola = rijeci[0].length / 2;
+			var duz = rijeci[0].length;
+			var sp1 = rijeci[0].slice(pola, rijeci[0].length);
+			var sp2 = rijeci[0].slice(0 , pola);
+			rijeci[0] = sp2+"-</br>"+sp1;
+		}
+		else if(rijeci[1].length > 20){
+			var pola = rijeci[1].length / 2;
+			var sp1 = rijeci[1].slice(pola, rijeci[1].length);
+			var sp2 = rijeci[1].slice(0 , pola);
+			rijeci[1] = sp2+"-</br>"+sp1;
+		}
 		var novo = rijeci[0]+"</br>"+rijeci[1];
 		$(".idk_winner_h1b").animate ({
 			opacity: 0
@@ -409,16 +426,85 @@ function generate(){
 		$(".idk_winner_h1b").animate ({
 			opacity: 1
 		}, 1000);
+		setTimeout(function(){
+			if((rijeci[0].length >= 10 && rijeci[0].length <= 11) || (rijeci[1].length >= 10 && rijeci[1].length <= 11)){
+			document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "8vh";
+			}
+			else if(rijeci[0].length == 12 || rijeci[1].length == 12){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "7vh";
+			}
+			else if(rijeci[0].length == 13 || rijeci[1].length == 13){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6.5vh";
+			}
+			else if(rijeci[0].length == 14 || rijeci[1].length == 14){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6vh";
+			}
+			else if(rijeci[0].length == 18 || rijeci[1].length == 18){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.5vh";
+			}
+			else if(rijeci[0].length == 19 || rijeci[1].length == 19){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.2vh";
+			}
+			else if(rijeci[0].length == 20 || rijeci[1].length == 20){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4vh";
+			}
+			else if((rijeci[0].length >= 15 && rijeci[0].length <= 17) || (rijeci[1].length >= 15 && rijeci[1].length <= 17)){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5vh";
+			}
+			else if(rijeci[0].length > 20){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
+			}
+			else if(rijeci[1].length > 20){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
+			}
+			else document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "9vh";
+		}, 1000);
 	}
 	else{
-		/*$(".idk_winner_h1a").text("RANDOM:");*/
+		
 		$(".idk_winner_h1b").animate ({
 			opacity: 0
 		}, 1000, function() {
-			$(".idk_winner_h1b").text(myList2[rndBroj]);
+			$(".idk_winner_h1b").html(item);
 		});
+		
 		$(".idk_winner_h1b").animate ({
 			opacity: 1
+		}, 1000);
+		setTimeout(function(){
+			console.log("y0")
+			if(item.length >= 10 && item.length <= 11){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "8vh";
+			}
+			else if(item.length == 12){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "7vh";
+			}
+			else if(item.length == 13){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6.5vh";
+			}
+			else if(item.length == 14){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6vh";
+			}
+			else if(item.length == 18){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.5vh";
+			}
+			else if(item.length == 19){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.2vh";
+			}
+			else if(item.length == 20){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4vh";
+			}
+			else if(item.length >= 15 && item.length <= 17){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5vh";
+			}
+			else if(item.length > 20){
+				var pola = item.length / 2;
+				var sp1 = item.slice(pola, item.length);
+				var sp2 = item.slice(0 , pola);
+				item = sp2+"-</br>"+sp1;
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5vh";
+			}
+			else document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "9vh";
 		}, 1000);
 	}
 }
