@@ -271,7 +271,7 @@ function dodajItem(){
 	location.hash="listPage";
 	showPage("#listPage");
 	}
-	else{
+	else if(item == ""){
 		if ($('input.checkbox_check').prop('checked')){
 			alert("Fill the required input field.");
 		}
@@ -280,6 +280,17 @@ function dodajItem(){
 		}
 		else if ($('input.checkbox_check-3').prop('checked')){
 			alert("Füllen Sie das Feld aus.");
+		}
+	}
+	else if(item.length >= 33){
+		if ($('input.checkbox_check').prop('checked')){
+			alert("Maximum number of characters is 33.");
+		}
+		else if ($('input.checkbox_check-2').prop('checked')){
+			alert("Maximalan broj karaktera je 33.");
+		}
+		else if ($('input.checkbox_check-3').prop('checked')){
+			alert("Maximale Anzahl der Briefe ist 33.");
 		}
 	}
 	document.getElementById('noviItem').value = "";
