@@ -5,6 +5,9 @@ $(document).ready (function() {
 	if (localStorage['myList2'] == null) localStorage['myList2']="[]";
 	$(".idk_maindiv").show();
 	var myList = JSON.parse(localStorage['myList']);
+	if(location.hash == "#listPage"){
+		showList()
+	}
 		/*$("#small").off("tap").on("tap", function() {
 			$("#idk_maindiv").reload();
 		});*/
@@ -179,9 +182,6 @@ function showList() {
 		if(lista[i].length >= 31 && lista[i].length <= 33){
 			document.getElementById(i).childNodes[0].style.fontSize = '10px';
 		}
-		console.log($("#"+i).children()[0]);
-		var yo = $("#"+i).children()[0];
-		console.log(yo); 
 	}
 	for(var j=0;j<lista.length;j++){
 		if(lista[j].length == 19){
@@ -388,6 +388,17 @@ $('#myModal2').on('shown.bs.modal', function (event) {
 			document.getElementById("inputUredi").value = "";
 			showList();
 		}
+		else if(tekst.length > 33){
+		if ($('input.checkbox_check').prop('checked')){
+			alert("Maximum number of characters is 33.");
+		}
+		else if ($('input.checkbox_check-2').prop('checked')){
+			alert("Maximalan broj karaktera je 33.");
+		}
+		else if ($('input.checkbox_check-3').prop('checked')){
+			alert("Maximale Anzahl der Briefe ist 33.");
+		}
+		}
 		else{
 			if ($('input.checkbox_check').prop('checked')){
 				alert("This field cannot be empty.");
@@ -428,7 +439,9 @@ function generate(){
 			var sp2 = rijeci[1].slice(0 , pola);
 			rijeci[1] = sp2+"-</br>"+sp1;
 		}
-		var novo = rijeci[0]+"</br>"+rijeci[1];
+		console.log(rijeci.length);
+		if(rijeci.length == 2)							var novo = rijeci[0]+"</br>"+rijeci[1];
+		else if(rijeci.length == 3)							var novo = rijeci[0]+"</br>"+rijeci[1]+"</br>"+rijeci[2];
 		$(".idk_winner_h1b").animate ({
 			opacity: 0
 		}, 1000, function() {
@@ -438,37 +451,42 @@ function generate(){
 			opacity: 1
 		}, 1000);
 		setTimeout(function(){
-			if((rijeci[0].length >= 10 && rijeci[0].length <= 11) || (rijeci[1].length >= 10 && rijeci[1].length <= 11)){
-			document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "8vh";
-			}
-			else if(rijeci[0].length == 12 || rijeci[1].length == 12){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "7vh";
-			}
-			else if(rijeci[0].length == 13 || rijeci[1].length == 13){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6.5vh";
-			}
-			else if(rijeci[0].length == 14 || rijeci[1].length == 14){
+			if(rijeci.length >= 3){
 				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6vh";
 			}
-			else if(rijeci[0].length == 18 || rijeci[1].length == 18){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.5vh";
+			else{
+				if((rijeci[0].length >= 10 && rijeci[0].length <= 11) || (rijeci[1].length >= 10 && rijeci[1].length <= 11)){
+				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "8vh";
+				}
+				else if(rijeci[0].length == 12 || rijeci[1].length == 12){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "7vh";
+				}
+				else if(rijeci[0].length == 13 || rijeci[1].length == 13){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6.5vh";
+				}
+				else if(rijeci[0].length == 14 || rijeci[1].length == 14){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "6vh";
+				}
+				else if(rijeci[0].length == 18 || rijeci[1].length == 18){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.5vh";
+				}
+				else if(rijeci[0].length == 19 || rijeci[1].length == 19){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.2vh";
+				}
+				else if(rijeci[0].length == 20 || rijeci[1].length == 20){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4vh";
+				}
+				else if((rijeci[0].length >= 15 && rijeci[0].length <= 17) || (rijeci[1].length >= 15 && rijeci[1].length <= 17)){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5vh";
+				}
+				else if(rijeci[0].length > 20){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
+				}
+				else if(rijeci[1].length > 20){
+					document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
+				}
+				else document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "9vh";
 			}
-			else if(rijeci[0].length == 19 || rijeci[1].length == 19){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4.2vh";
-			}
-			else if(rijeci[0].length == 20 || rijeci[1].length == 20){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "4vh";
-			}
-			else if((rijeci[0].length >= 15 && rijeci[0].length <= 17) || (rijeci[1].length >= 15 && rijeci[1].length <= 17)){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5vh";
-			}
-			else if(rijeci[0].length > 20){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
-			}
-			else if(rijeci[1].length > 20){
-				document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "5.5vh";
-			}
-			else document.getElementsByClassName("idk_winner_h1b")[0].style.fontSize = "9vh";
 		}, 1000);
 	}
 	else{
@@ -556,4 +574,14 @@ $('#bosJez').on('click', function(){
 $('#njemJez').on('click', function(){
 	$('.checkbox_check-3').prop('checked', true);
 	$('.idk_languages').change(); 
+});
+
+$('.about_slika').on('click', function(){
+	$("#full_slika").show();
+	var src = $(this).attr('src');
+	$("#full_slika_jpg").attr('src', src);
+});
+
+$("#full_slika").on('click', function(){
+	$("#full_slika").hide()
 });
