@@ -59,7 +59,6 @@
 				<div class="idk_home" id="home">
 					<div class="col-xs-12 idk_winner">
 						<div class="idk_winner_name" id="winner">
-							<h1 class="idk_winner_h1a"></h1>
 							<h1 class="idk_winner_h1b"></h1>
 						</div>
 					</div>
@@ -219,70 +218,73 @@
 			<!-- -----------ABOUT APP------------ -->
 
 		<div data-role="page" id="aboutApp" class="page">
-			<div data-role="header">
-				<div class="idk_header">
-					<button id="nazadMain" onClick="nazadMain()">
-						<i class="fa fa-chevron-left nazad" aria-hidden="true"></i>
-					</button>
-					<h3 class="naslov">RANDOM PICKER</h3>
-				</div>
+			<div id = "full_slika">
+				<img src="images/1.png" class="img-responsive" id="full_slika_jpg">
 			</div>
-		
-			<div data-role="main" class="ui-content">
-				<div class="idk_about_app">
-					<h3 class="idk_about_naslov">ABOUT APP</h3>
-					<p id="Ap1">Random Picker is a simple and fast application that serves for picking a random winner from a list of items. This application can be used in a lot of varius situations, for example:</p>
-					<p id="Ap2">- Choosing a random winner of some prize game</p>
-					<p id="Ap3">- Randomly select a person to do some tasks (no more arguments with friends) </p>
-					<p id="Ap4">- Making hard choices easier</p>
-					<p id="Ap5">- Helping tool when playing social games (spin the bottle, card games...)</p>
-					<p id="Ap6">- Randomly choosing a place to order food from</p>
-					<p id="Ap7">This application was developed by interns at IDK Studio Bihać, Bosnia and Herzegovina. For the developmentof this project we used Adobe Phone Gap framework together with the following programming languages: HTML5, CSS3, JavaScript and jQuery. This application was build with a purpose of expanding knowledge and experience with web technologies, and gaining experience in working as a team on a project.</p>
-					<h3 class="idk_clanovi">TEAM MEMBERS</h3>
-					<div class="row no_margin">
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Arnela Gutlić</p>
-						</div>
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Enes Dedić</p>
-						</div>
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Emil Šarić</p>
-						</div>
-					</div>
-					<div class="row no_margin margin_bottom65 margin_top20">
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Emir Bender</p>
-						</div>
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Rijad Glumac</p>
-						</div>
-						<div class="col-xs-4">
-							<img src="images/1.png" class="img-responsive">
-							<p>Zinaid kapić</p>
-						</div>
+				<div data-role="header">
+					<div class="idk_header">
+						<button id="nazadMain" onClick="nazadMain()">
+							<i class="fa fa-chevron-left nazad" aria-hidden="true"></i>
+						</button>
+						<h3 class="naslov">RANDOM PICKER</h3>
 					</div>
 				</div>
-			</div>
-		
-			<!--footer-->
 			
-			<div class="foot">
-				<ul class="foot1">
-					<button class="btn btn-default idk-btn-style" type="button" onclick="dropup()"><i class="fa fa-bars idk-right-menu" aria-hidden="true"></i><span class="meni idk-footer-style">menu</span></button>
-					<li class="foot-li"><a href="#mainPage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style home">home</span></a></li>
-					<li class="foot-li"><a href="#listPage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style items">items</span></a></li>
-					<li class="foot-li"><a href="#languages"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style languages">languages</span></a></li>
-					<li class="foot-li"><a href="#aboutApp"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style aboutapp">about app</span></a></li>
-				</ul>
-			</div>
+				<div data-role="main" class="ui-content">
+					<div class="idk_about_app">
+						<h3 class="idk_about_naslov">ABOUT APP</h3>
+						<p id="Ap1">Random Picker is a simple and fast application that serves for picking a random winner from a list of items. This application can be used in a lot of varius situations, for example:</p>
+						<p id="Ap2">- Choosing a random winner of some prize game</p>
+						<p id="Ap3">- Randomly select a person to do some tasks (no more arguments with friends) </p>
+						<p id="Ap4">- Making hard choices easier</p>
+						<p id="Ap5">- Helping tool when playing social games (spin the bottle, card games...)</p>
+						<p id="Ap6">- Randomly choosing a place to order food from</p>
+						<p id="Ap7">This application was developed by interns at IDK Studio Bihać, Bosnia and Herzegovina. For the developmentof this project we used Adobe Phone Gap framework together with the following programming languages: HTML5, CSS3, JavaScript and jQuery. This application was build with a purpose of expanding knowledge and experience with web technologies, and gaining experience in working as a team on a project.</p>
+						<h3 class="idk_clanovi">TEAM MEMBERS</h3>
+						<div class="row no_margin">
+							<div class="col-xs-4">
+								<img src="images/arnela.jpg" class="img-responsive about_slika">
+								<p>Arnela Gutlić</p>
+							</div>
+							<div class="col-xs-4" id="enes">
+								<img src="images/enes.jpg" class="img-responsive about_slika">
+								<p>Enes Dedić</p>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/1.png" class="img-responsive about_slika">
+								<p>Emil Šarić</p>
+							</div>
+						</div>
+						<div class="row no_margin margin_bottom65 margin_top20">
+							<div class="col-xs-4">
+								<img src="images/emir.jpg" class="img-responsive about_slika">
+								<p>Emir Bender</p>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/riki.jpg" class="img-responsive about_slika">
+								<p>Rijad Glumac</p>
+							</div>
+							<div class="col-xs-4">
+								<img src="images/zinaid.jpg" class="img-responsive about_slika">
+								<p>Zinaid kapić</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			
-			<!--footer-->
+				<!--footer-->
+				
+				<div class="foot">
+					<ul class="foot1">
+						<button class="btn btn-default idk-btn-style" type="button" onclick="dropup()"><i class="fa fa-bars idk-right-menu" aria-hidden="true"></i><span class="meni idk-footer-style">menu</span></button>
+						<li class="foot-li"><a href="#mainPage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style home">home</span></a></li>
+						<li class="foot-li"><a href="#listPage"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style items">items</span></a></li>
+						<li class="foot-li"><a href="#languages"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style languages">languages</span></a></li>
+						<li class="foot-li"><a href="#aboutApp"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="idk-footer-style aboutapp">about app</span></a></li>
+					</ul>
+				</div>
+				
+				<!--footer-->
 		</div>
 		  
 			<!-- ABOUT APP -->
