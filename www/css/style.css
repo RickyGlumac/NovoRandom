@@ -673,6 +673,38 @@ li > span{
 
 /* ----------MAIN PAGE------------ */
 
+/* ----------ABOUT APP IMAGE COVER------------ */
+
+#full_slika{
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0px; 
+    left: 0px; 
+    background-color: rgba(0,0,0, 0.7);
+	display: table;
+    display: none;
+    z-index: 100;
+}
+
+#full_slika img{
+	width: 80%;
+	margin-top: 30%;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 1;
+}
+
+.about_slika{
+	height: 85px;
+	overflow: hidden;
+	width: 100%;
+}
+
+/* ----------ABOUT APP IMAGE COVER------------ */
+
+
+
 /* ----------MEDIA BUTTON POSITION------------ */
 
 @media only screen and (max-width: 400px) {
