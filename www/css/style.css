@@ -684,7 +684,7 @@ li > span{
     background-color: rgba(0,0,0, 0.7);
 	display: table;
     display: none;
-    z-index: 100;
+    z-index: 1000;
 }
 
 #full_slika img{
