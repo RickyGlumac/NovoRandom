@@ -7,7 +7,7 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
-	<preference name="orientation" value="portrait" />
+	<preference name="phonegap-version" value="cli-7.1.0" />
     <content src="index.html" />
 	<platform name="android">
 		<icon density="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
@@ -18,7 +18,7 @@
 		<icon density="xxxhdpi" src="res/icons/android/drawable-xxxhdpi-icon.png" />
 	</platform>
 	<platform name="ios">
-		<icon height="57" platform="ios" src="res/icons/ios/icon.png" width="57" />
+		<icon height="1024" platform="ios" src="res/icons/ios/icon.png" width="1024" />
 		<icon height="114" platform="ios" src='res/icons/ios/icon@2x.png' width="114" />
 		<icon height="40" platform="ios" src="res/icons/ios/icon-40.png" width="40" />
 		<icon height="80" platform="ios" src='res/icons/ios/icon-40@2x.png' width="80" />
