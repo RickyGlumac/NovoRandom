@@ -7,7 +7,7 @@
     <author email="info@idkstudio.com" href="www.idkstudio.com">
         IDK Studio
     </author>
-	<preference name="orientation" value="portrait" />
+	<preference name="phonegap-version" value="cli-7.1.0" />
     <content src="index.html" />
 	<platform name="android">
 		<icon density="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
